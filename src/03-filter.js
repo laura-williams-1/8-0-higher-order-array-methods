@@ -15,11 +15,7 @@ const { printAllSongTitles } = require("./01-forEach");
  * @returns {Object[]} An array of objects.
  */
 function getSongsBySaib(songs) {
-  return songs.filter((song) => {
-    if (song.artist === "Saib") {
-      return song.title;
-    }
-  });
+  return songs.filter((song) => song.artist === "Saib");
 }
 /**
  * Returns an array of all songs where the runtime is over three minutes.
@@ -27,11 +23,7 @@ function getSongsBySaib(songs) {
  * @returns {Object[]} An array of objects.
  */
 function getSongsOverThreeMinutes(songs) {
-  return songs.filter((song) => {
-    if (song.runtimeInSeconds > 180) {
-      return song.title;
-    }
-  });
+  return songs.filter((song) => song.runtimeInSeconds > 180);
 }
 
 /**
@@ -40,11 +32,7 @@ function getSongsOverThreeMinutes(songs) {
  * @returns {Object[]} An array of objects.
  */
 function getTitleTracks(songs) {
-  return songs.filter((song) => {
-    if (song.title === song.album) {
-      return song.title;
-    }
-  });
+  return songs.filter((song) => song.title === song.album);
 }
 
 module.exports = {
